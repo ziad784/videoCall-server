@@ -20,7 +20,7 @@ app.use(cors({
   
 }));
 
-const PORT = 5001
+const PORT = process.env.PORT
 
 
 io.on("connection",(socket)=>{
