@@ -13,7 +13,11 @@ const io = require("socket.io")(server,{
 
 const cors = require("cors")
 
-app.use(cors())
+app.use(cors({
+    origin:["http://localhost:3000","https://video-call-react-jet.vercel.app/","https://video-call-react-jet.vercel.app"],
+    methods:["POST","GET"],
+  
+}));
 
 const PORT = 5001
 
