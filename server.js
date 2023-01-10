@@ -7,7 +7,8 @@ const server = require("http").createServer(app)
 const io = require("socket.io")(server,{
     cors: {
         origin:["http://localhost:3000","https://video-call-react-jet.vercel.app/","https://video-call-react-jet.vercel.app"],
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        credentials: true
       }
 })
 
